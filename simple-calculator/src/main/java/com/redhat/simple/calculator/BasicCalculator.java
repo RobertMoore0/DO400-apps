@@ -1,30 +1,15 @@
 package com.redhat.simple.calculator;
 
-import java.util.*;
+import java.util.Random;
 
-public class BasicCalculator {
-    public int divide(int dividend, int divisor) {
-        if (divisor == 0)
-            return Integer.MAX_VALUE;
-        else
-            return dividend / divisor;
-    }
+public final class BasicCalculator extends Calculator {
 
-    public int subs(int minuend, int subtrahend) {
-        return minuend-subtrahend;
-    }
+	 private final Random randomService = new Random();
 
-    public int sum(int addendA, int addendB) {
-        return addendA+addendB;
-    }
+	  public int random() {
 
-    public int multiply(int multiplicand, int multiplier) {
-        return multiplicand*multiplier;
-    }
+		   return randomService.nextInt();
 
-    public int Random() {
-        Random r = new Random();
+		    }
 
-        return r.nextInt();
-    }
 }
